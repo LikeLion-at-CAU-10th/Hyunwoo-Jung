@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 600px;
+    background-color: black;
+    align-items: center;
+}
+
+.layout-title{
+    display: flex;
+    background-color: pink;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.layout-recent{
+    display: flex;
+    flex-direction: row;
+    background-color: greenyellow;
+    justify-content: center;
+}
+
+.layout-popular{
+    display: flex;
+    flex-direction: row;
+    background-color: bisque;
+    justify-content: center;
+
+}
+
+.title{
+    background-color: red;
+    flex-basis: 100%;
+    text-align: center;
+    border: 3px solid black;
+}
+
+.recent{
+    background-color: yellow;
+    flex-basis: 25%;
+    text-align: center;
+    border: 3px solid black;
+}
+
+.popular1{
+    background-color: brown;
+    text-align: center;
+    flex-basis: 75%;
+    border: 3px solid black;
+}
+.popular2{
+    background-color: brown;
+    text-align: center;
+    flex-basis: 25%;
+    border: 3px solid black;
+}
+
+
