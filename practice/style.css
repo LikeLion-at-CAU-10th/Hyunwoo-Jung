@@ -1,0 +1,37 @@
+nav{
+    background-color: rgb(13, 48, 143);
+    color: black;
+    display: fixed;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    width: 800px;
+    height: 100px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#name{
+    color: blue;
+}
+
+.introduce-text{
+    color: brown;
+}
+
+#name:hover{
+    color: black;
+}
+.nemo{
+    border: solid 2px;
+    padding: 0 0 0 0;
+    margin:0 0 0 0;
+}
+
+
+
+
