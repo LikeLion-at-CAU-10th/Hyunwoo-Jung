@@ -13,25 +13,23 @@
     <link rel = "stylesheet" href = "css/style.css">
     <link rel="stylesheet/less" type="text/css" href="css/timeline2.less"> 
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
-
-
     <title>About Developer Supersett</title>
 </head>
 <body>
     <div id="container">
         <header id="header">
             <nav class="menu">
-                <ul>
-                    <li><a href=""><b>Home</b></a></li>
-                    <li><a href=""><b>About Me</b></a></li>
-                    <li><a href=""><b>Project</b></a></li>
-                    <li><a href=""><b>Contact</b></a></li>
+                <ul class="menu" style="color: white;">
+                    <li><a href="#home"><b >Home</b></a></li>
+                    <li><a href="#aboutMe"><b>About Me</b></a></li>
+                    <li><a href="#project"><b>Project</b></a></li>
+                    <li><a href="#contact"><b>Contact</b></a></li>
                 </ul>
             </nav>
         </header>
     
 
-    <div class="list">
+    <div class="list" id="home">
         <div class="one">
           <span class="profile"><img src="img/profile1.jpg" width="450px;" height="450px" alt=""/></span> 
         </div>
@@ -50,7 +48,7 @@
     </div>
     </div>
 
-    <div class="list" >
+    <div class="list" id="aboutMe">
         <div class ="two" >
             
             <div id="content" style="width: 650px;">
@@ -103,7 +101,7 @@
         </div>
     </div>
 
-    <div class="list">
+    <div class="list" id="project">
         <div class="three">
             
             <div>
@@ -161,7 +159,7 @@
             </div>
         </div>
     </div>
-    <div class="list">
+    <div class="list" id="contact">
         <div class = "four">
             <a href="https://github.com/supersett" class="ct">Github</a>
             <a href="https://supersett-diary.tistory.com/" class="ct">Tistory</a>
@@ -188,12 +186,9 @@
         });
       });
 
-      /*
-      $( document ).ready( function() {
-        $( "#ani2" ).fadeIn( 5000 );
-      } );
-      */
-</script>
+
+
+    </script>
 
 </body>
 </html>
