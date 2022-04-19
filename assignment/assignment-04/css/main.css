@@ -98,13 +98,18 @@ h1 {
     width: 300px;
     height: 300px;
     display: block;
-    margin: 7vh 5vh;
+    margin: 30px 5vh;
     margin-bottom: 50px;
+    border-radius: 20%;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
 }
 
 .favorites {
     display:inline-flex;
-    margin-top: 60px;
+    margin-top: 0px;
+    margin-bottom: 40px
 }
 
 /* page 4 */
