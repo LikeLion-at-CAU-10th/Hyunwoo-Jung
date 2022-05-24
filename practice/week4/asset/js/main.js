@@ -1,8 +1,8 @@
 import { fetchGET, fetchPOST } from "./dataFetching.js";
 
-const SERVER_HOST =
-  "https://asia-northeast3-likelion-js-practice.cloudfunctions.net/api";
-
+//const SERVER_HOST =
+//  "https://asia-northeast3-likelion-js-practice.cloudfunctions.net/api";
+const SERVER_HOST="http://127.0.0.1:8000"
 const NAME = "정현우";
 
 async function getProfileData(name) {
@@ -34,7 +34,7 @@ async function getFootprint(name) {
 }
 
 async function sendFootprint() {
-  const path="/footprint";
+  const path="/footprint/send";
   const messageObj={
     content:document.querySelector(".message-content").value,
     receiverName:document.querySelector(".message-sender").value,
@@ -46,11 +46,13 @@ async function sendFootprint() {
 }
 
 window.onload = function () {
+  const isGetFootprintSuccess = getFootprint(NAME)
+
   const sendButton = document.querySelector(".send-btn");
   sendButton.addEventListener("click", () => {
     sendFootprint();
   });
 
-  getProfileData(NAME);
-  getFootprint(NAME);
+  //getProfileData(NAME);
+  //getFootprint(NAME);
 };
