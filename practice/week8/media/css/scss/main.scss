@@ -1,0 +1,19 @@
+@import "_mixin.scss";
+
+@include mobile {
+  .img-card {
+    width: 100px;
+  }
+}
+
+@include tablet {
+  .img-card {
+    width: 200px;
+  }
+}
+
+@include desktop {
+  .img-card {
+    width: 300px;
+  }
+}

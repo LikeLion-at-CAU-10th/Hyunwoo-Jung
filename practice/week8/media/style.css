@@ -1,0 +1,14 @@
+/*mobile*/
+.title{font-size: 30px;}
+
+@media (min-width:640px){
+    .title{font-size: 25px;}
+}
+
+@media (min-width:768px){
+    .title{font-size: 20px;}
+}
+
+@media (min-width:1024px){
+    .title{font-size: 15px;}
+}
