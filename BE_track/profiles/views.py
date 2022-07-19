@@ -76,3 +76,61 @@ def get_profile_all(requests):
                 'message': 'method error',
                 'data': None
             })
+
+
+def create_content(request, profile_id):
+    if request.method == "POST":
+        
+        body =  json.loads(request.body.decode('utf-8'))
+        
+        new_content = Content.objects.create(
+            profile = get_object_or_404(Profile, pk = profile_id),
+            content = request.POST.get('content','')
+        )
+   
+        new_todo_json={
+            "id" : new_content.id,
+            "content" : new_content.content,
+        }
+        
+        return JsonResponse({
+                'status': 200,
+                'success': True,
+                'message': 'todo 생성 성공!',
+                'data': new_todo_json
+            })
+
+
+    return JsonResponse({
+                'status': 405,
+                'success': False,
+                'message': 'method error',
+                'data': None
+        })
+
+def get_content_all(request, profile_id):
+    if request.method == "GET":
+        profile_content = Content.objects.filter(profile = profile_id)
+        
+        profile_content_json=[]
+        for content in profile_content:
+            new_set={
+                "content_id" : content.id,
+                "content" : content.content,
+            }
+            profile_content_json.append(new_set)
+        
+        return JsonResponse({
+                'status': 200,
+                'success': True,
+                'message': 'todo_all 수신 성공!',
+                'data': profile_content_json
+            })
+
+    return JsonResponse({
+            'status': 405,
+            'success': False,
+            'message': 'method error',
+            'data': None
+        })
+
