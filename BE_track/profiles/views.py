@@ -81,7 +81,6 @@ def get_profile_all(requests):
 def create_content(request, profile_id):
     if request.method == "POST":
         
-        body =  json.loads(request.body.decode('utf-8'))
         
         new_content = Content.objects.create(
             profile = get_object_or_404(Profile, pk = profile_id),

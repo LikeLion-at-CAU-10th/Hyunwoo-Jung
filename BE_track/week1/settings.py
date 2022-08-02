@@ -46,6 +46,8 @@ PROJECT_APPS=[
     'posts',
     'todomate',
     'profiles',
+    'likelion',
+    'generics',
 ]
 THIRD_PARTY_APPS=[]
 

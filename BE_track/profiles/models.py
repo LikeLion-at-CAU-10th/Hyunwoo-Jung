@@ -11,3 +11,4 @@ class Profile(models.Model):
 class Content(models.Model):
     profile=models.ForeignKey(Profile,on_delete=models.CASCADE,null=False,blank=False)
     content=models.CharField(max_length=50)
+    

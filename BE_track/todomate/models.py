@@ -1,3 +1,4 @@
+from random import choices
 from unicodedata import category
 from django.db import models
 from django.forms import CharField, DateField, NullBooleanField
@@ -17,3 +18,18 @@ class Todo(models.Model):
     is_completed=models.BooleanField(default=False)
     pup_date=models.DateTimeField(auto_now_add=True)
     update_date=models.DateTimeField(auto_now=True)
+    
+class LikeLion(models.Model):
+    
+    CHOICES=(
+        ('기획',"기획"),
+        ('백엔드','백엔드'),
+        ('프론트','프론트')
+        )
+    
+    name=models.CharField(max_length=20,default="",unique=True)
+    age=models.CharField(max_length=20,choices=CHOICES)
+    
+    
+    
+    

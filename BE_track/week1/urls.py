@@ -13,6 +13,7 @@ urlpatterns = [
     path('json/',json_response,name='json_response'),
     path('todomate/',include("todomate.urls")),
     path('profiles/',include("profiles.urls")),
+    path('generics/',include("generics.urls")),
 ]
 urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
